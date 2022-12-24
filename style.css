@@ -1,0 +1,22 @@
+body {
+    background-color: seagreen;
+    display: flexbox;
+}
+
+.player {
+    background-color: aliceblue;
+
+}
+
+.title {
+    font-size: 100px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.computer {
+    background-color: blanchedalmond;
+}
+
+.how {
+    color:blue;
+}
