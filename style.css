@@ -1,22 +1,62 @@
 body {
-    background-color: seagreen;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLp1lZR5ADHMurePb-1qQBFCSVHrQGsnLuMg&usqp=CAU")
     display: flexbox;
 }
 
 .player {
     background-color: aliceblue;
-
 }
 
 .title {
+    background-color:darkred;
     font-size: 100px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.computer {
-    background-color: blanchedalmond;
+    font-family: serif;
 }
 
 .how {
-    color:blue;
+    color: blue;
+    margin: auto;
+}
+
+.new {
+    color: red;
+}
+
+.score-l {
+    border: 3px solid black;
+}
+
+.score-r {
+    border: 3px solid maroon;
+}
+
+.left-hand {
+    border: 5px solid black;
+    height: 250px;
+    width: 150px;
+    display: flex;
+    margin: ;
+}
+
+.right-hand {
+    border: 5px solid green;
+    height: 250px;
+    width: 150px;
+    margin: auto;
+}
+
+.player-card {
+    border: 3px solid black;
+    height :150px;
+    width: 100px;
+}
+
+.cpu-card {
+    border: 3px solid green;
+    height: 150px;
+    width: 100px;
+}
+
+img {
+    
 }
