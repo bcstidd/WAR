@@ -1,5 +1,4 @@
 body {
-    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLp1lZR5ADHMurePb-1qQBFCSVHrQGsnLuMg&usqp=CAU")
     display: flexbox;
 }
 
@@ -35,7 +34,7 @@ body {
     height: 250px;
     width: 150px;
     display: flex;
-    margin: ;
+   
 }
 
 .right-hand {
@@ -55,8 +54,4 @@ body {
     border: 3px solid green;
     height: 150px;
     width: 100px;
-}
-
-img {
-    
 }
