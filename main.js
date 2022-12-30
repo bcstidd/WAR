@@ -6,9 +6,9 @@ function generateDeck() {
     suits.forEach(suit => {
         faces.forEach(face => {
             let score
-            // if(face === 'K') {
-            //     score = 10
-            // }
+             if(face === 'K') {
+                 score = 13
+             }
             // CALCULATE THE SCORE OF THE CARD
             // AND INCLUDE THAT NUMERICAL VALUE ON THE CARD OBJECT
             deck.push({
