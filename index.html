@@ -5,22 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+   
     <script defer src="main.js"></script>
-    <!-- <link rel="stylesheet" href="card-deck-css/css/cardstarter.css" type="text/css"> -->
+    <link rel="stylesheet" href="card-deck-css/css/cardstarter.css" type="text/css">
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
     <div id = "board">
-        <div class = "card"></div>
         <div class = "title">WAR</div>
-        <div class = "how"><button class="how-button">How to Play</button></div>
-        <div class = "new"><button class="new-button">New Game</button></div>
-        <div class = "left-hand"></div>
-        <div class = "player-card"></div>
-        <div class = "cpu-card"></div>
-        <div class = "right-hand"></div>
-        <div class = "score-p">Player 1 Score:</div>
-        <div class = "score-c">CPU Score:</div>
+        <div class = "how"><button class="how_button">How to Play</button></div>
+        <div class = "new"><button class="new_button">New Game</button></div>
+        <div id="hands">
+            <div class = "card back player"></div>
+            <div class = "card back cpu "></div>
+        </div>  
+        <div id="scores">
+            <div class = "score_p">Player 1 Score:</div>
+            <div class = "score_c">CPU Score:</div>
+        </div>
     </div>
 </body>
 </html>

@@ -28,4 +28,4 @@ function renderDeck() {
 }
 
 generateDeck()
-renderDeck()
+

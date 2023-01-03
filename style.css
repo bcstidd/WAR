@@ -20,7 +20,7 @@ div {
     justify-content: space-between;
     height: 80%;
     width: 90%;
-    background-color: cadetblue;
+    background-color: #35654D;
     margin: 30px auto;
     position: relative;    
 }
@@ -29,7 +29,7 @@ div {
 
 .title {
     justify-content: center;
-    background-color:darkred;
+    background-color: darkred;
     border: 6px solid black;
     font-size: 100px;
     font-family: serif;
@@ -44,7 +44,7 @@ div {
     border-radius: 5px;
 }
 
-button.how-button {
+button.how_button :hover {
     color:lightseagreen;
     font-size: small;
     
@@ -52,7 +52,7 @@ button.how-button {
 
 .new {
     justify-self: flex-start;
-    margin: 0px 0px auto 0px;
+    margin: -50px 0px auto 0px;
     border: 4px solid black;
     border-radius: 5px;
     align-self: center;
@@ -60,7 +60,8 @@ button.how-button {
     
 }
 
-button.new-button { 
+
+button.new_button { 
     background-color: red; 
     justify-content: center;
     align-items: center;
@@ -69,40 +70,38 @@ button.new-button {
     width: 150px;
 } 
 
-
-div > .score-c {
-    justify-content: flex-end;
-    align-self: flex-end;
-    border: 3px solid black;
-    margin-bottom: 0;
+#scores {
+    display: flex;
+    justify-content: space-around;
+    
 }
 
 
-div > .score-p {
-    background-color: forestgreen;
+.score_c {
     border: 3px solid black;
-    justify-self: flex-end;
-    align-self: flex-start;
-    margin-bottom: 0 auto;
+    background-color: lightslategrey;
+}
+
+.score_p {
+    background-color: rgb(80, 213, 80);
+    border: 3px solid black;
+    border-right: none;
 
 }
 
-
+#hands {
+    display: flex;
+    justify-content: space-around;
+}
 /* player base hand */
-div > .left-hand {
-    border: 3px dashed;
-    height: 100px;
-    width: 25%;
-    
-    
+.card.back.player {
+    font-size: xx-large;
+
 }
 
 /* CPU base hand */
-div > .right-hand {
+.card.back.cpu {
     justify-content: center;
-    align-self: flex-end;
+    font-size: xx-large;
     border: 3px dotted magenta;
-    height: 100px;
-    width: 25%;
-    position:sticky;
 }
