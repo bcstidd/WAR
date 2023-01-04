@@ -25,7 +25,11 @@ div {
     position: relative;    
 }
 
-
+#rules {
+    font-size: 20px;
+    color: white;
+    border: 3px solid white;
+}
 
 .title {
     justify-content: center;
@@ -36,18 +40,12 @@ div {
 }
 
 .how {
-    justify-content: flex-end;
+    justify-content: center;
     position:relative;
     align-self: flex-end;
     margin: 10px 10px 0px 0px;
-    border: 2px solid black;
-    border-radius: 5px;
-}
-
-button.how_button :hover {
-    color:lightseagreen;
-    font-size: small;
     
+    border-radius: 5px;
 }
 
 .new {
@@ -60,6 +58,12 @@ button.how_button :hover {
     
 }
 
+button.how_button {
+    background-color: cadetblue;
+    font-weight: 500;
+    font-size: small;
+    height: 30px;
+}
 
 button.new_button { 
     background-color: red; 
@@ -70,7 +74,29 @@ button.new_button {
     width: 150px;
 } 
 
+button.playbtn {
+    height: 30px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+button.new_button { 
+    background-color: red; 
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    height: 40px;
+    width: 150px;
+} 
+
+button.next {
+    height: 30px;
+    border-radius: 5px;
+}
+
 #scores {
+    border: 3px dotted red;
     display: flex;
     justify-content: space-around;
     
@@ -94,6 +120,7 @@ button.new_button {
     justify-content: space-around;
 }
 /* player base hand */
+
 .card.back.player {
     font-size: xx-large;
 
@@ -103,5 +130,22 @@ button.new_button {
 .card.back.cpu {
     justify-content: center;
     font-size: xx-large;
-    border: 3px dotted magenta;
+
 }
+
+#submissions {
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+
+
+
+.my.card {
+    font-size: xx-large;
+}
+
+.comp.card {
+    font-size: xx-large;
+}
+

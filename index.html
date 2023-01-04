@@ -13,15 +13,27 @@
 <body>
     <div id = "board">
         <div class = "title">WAR</div>
-        <div class = "how"><button class="how_button">How to Play</button></div>
+        <div class = "how"><button onclick="help()" class="how_button">How to Play</button>
+            <p id="rules"></p>
+        </div>
+    
         <div class = "new"><button class="new_button">New Game</button></div>
+       
+        <div id="submissions">
+            <div class ="my card"></div>
+            <div class ="comp card"></div>
+        </div>
+        
         <div id="hands">
             <div class = "card back player"></div>
+            <button class="playbtn">Draw!</button>
+          
             <div class = "card back cpu "></div>
         </div>  
         <div id="scores">
             <div class = "score_p">Player 1 Score:</div>
             <div class = "score_c">CPU Score:</div>
+            
         </div>
     </div>
 </body>
