@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>WAR</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,26 +14,23 @@
 <body>
     <div id = "board">
         <div class = "title">WAR</div>
-        <div class = "how"><button onclick="help()" class="how_button">How to Play</button>
-            <p id="rules"></p>
-        </div>
     
-        <div class = "new"><button class="new_button">New Game</button></div>
+        <div id = "newBtn">New Game</button></div>
        
         <div id="submissions">
-            <div class ="my card"></div>
-            <div class ="comp card"></div>
+            <div id ="playercard" class = "card"></div>
+            <div id ="compcard" class = "card"></div>
         </div>
         
         <div id="hands">
             <div class = "card back player"></div>
-            <button class="playbtn">Draw!</button>
-          
+            <button id="playBtn">Draw!</button>
             <div class = "card back cpu "></div>
         </div>  
+
         <div id="scores">
-            <div class = "score_p">Player 1 Score:</div>
-            <div class = "score_c">CPU Score:</div>
+            <div id = "score_p">Card Count:</div>
+            <div id = "score_c">CPU Card Count:</div>
             
         </div>
     </div>

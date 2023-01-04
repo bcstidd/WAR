@@ -27,8 +27,7 @@ div {
 
 #rules {
     font-size: 20px;
-    color: white;
-    border: 3px solid white;
+    color: transparent;
 }
 
 .title {
@@ -39,23 +38,14 @@ div {
     font-family: serif;
 }
 
-.how {
-    justify-content: center;
-    position:relative;
-    align-self: flex-end;
-    margin: 10px 10px 0px 0px;
-    
-    border-radius: 5px;
-}
 
-.new {
+
+#new {
     justify-self: flex-start;
-    margin: -50px 0px auto 0px;
+    margin: -20px 0px auto 0px;
     border: 4px solid black;
     border-radius: 5px;
     align-self: center;
-    
-    
 }
 
 button.how_button {
@@ -74,14 +64,14 @@ button.new_button {
     width: 150px;
 } 
 
-button.playbtn {
+#playBtn {
     height: 30px;
     background-color: black;
     color: white;
     border: 2px solid white;
 }
 
-button.new_button { 
+#newBtn { 
     background-color: red; 
     justify-content: center;
     align-items: center;
@@ -140,12 +130,4 @@ button.next {
 }
 
 
-
-.my.card {
-    font-size: xx-large;
-}
-
-.comp.card {
-    font-size: xx-large;
-}
 
