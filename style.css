@@ -25,11 +25,6 @@ div {
     position: relative;    
 }
 
-#rules {
-    font-size: 20px;
-    color: transparent;
-}
-
 .title {
     justify-content: center;
     background-color: darkred;
@@ -38,33 +33,24 @@ div {
     font-family: serif;
 }
 
+#wintext {
+    justify-content: center;
+    align-self: center;
+    border: transparent;
+}
 
 
 #new {
     justify-self: flex-start;
-    margin: -20px 0px auto 0px;
+    margin: 20px 0px auto 0px;
     border: 4px solid black;
     border-radius: 5px;
     align-self: center;
 }
 
-button.how_button {
-    background-color: cadetblue;
-    font-weight: 500;
-    font-size: small;
-    height: 30px;
-}
-
-button.new_button { 
-    background-color: red; 
-    justify-content: center;
-    align-items: center;
-    font-size: larger;
-    height: 40px;
-    width: 150px;
-} 
-
 #playBtn {
+    justify-content: center;
+    align-self: center;
     height: 30px;
     background-color: black;
     color: white;
@@ -75,15 +61,16 @@ button.new_button {
     background-color: red; 
     justify-content: center;
     align-items: center;
+    align-self: center;
+    border: 5px solid black;
+    border-radius: 5px;
     font-size: larger;
+    font-weight: 500;
+    margin-top: -30px;
     height: 40px;
     width: 150px;
 } 
 
-button.next {
-    height: 30px;
-    border-radius: 5px;
-}
 
 #scores {
     border: 3px dotted red;
@@ -92,17 +79,29 @@ button.next {
     
 }
 
+#rules {
+    align-items: center;
+    align-self: flex-end;
+    border: none;
+    color: white;
+}
 
-.score_c {
+#score_c {
     border: 3px solid black;
     background-color: lightslategrey;
 }
 
-.score_p {
+#score_p {
     background-color: rgb(80, 213, 80);
     border: 3px solid black;
     border-right: none;
 
+}
+
+#center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #hands {

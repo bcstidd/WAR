@@ -14,24 +14,24 @@
 <body>
     <div id = "board">
         <div class = "title">WAR</div>
-    
         <div id = "newBtn">New Game</button></div>
-       
         <div id="submissions">
             <div id ="playercard" class = "card"></div>
             <div id ="compcard" class = "card"></div>
         </div>
-        
+        <div id = "wintext"></div>
+        <div id ="gameover">Game over</div>
         <div id="hands">
             <div class = "card back player"></div>
+            <div id = "center">
             <button id="playBtn">Draw!</button>
+            <div id ="rules"><p>First player to <i><u>52</u></i> cards wins!</p></div>
+            </div>
             <div class = "card back cpu "></div>
         </div>  
-
         <div id="scores">
             <div id = "score_p">Card Count:</div>
             <div id = "score_c">CPU Card Count:</div>
-            
         </div>
     </div>
 </body>
