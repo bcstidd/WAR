@@ -31,7 +31,7 @@ const score_c = document.getElementById('score_c')
 const submissions = document.getElementById('submissions')
 
 // /*----- event listeners -----*/
-
+playBtn.addEventListener('click', tietext.remove())
 playBtn.addEventListener('click', flipCard)
 newBtn.addEventListener('click', init)
 
@@ -61,41 +61,39 @@ function shuffleDeck(deck) {
     }
 
 function dealHand() {
-    player1Hand = deck.slice(0, 26)
+    player1Hand = deck.slice(1, 26)
     player2Hand = deck.slice(26, 52)
 }
 
 function flipCard() {  
-    // while(player1Hand.value > 0 || player2Hand.value > 0) {
-    
+      
     const player1card = player1Hand.pop()
     const player2card = player2Hand.pop()
-  
     playercard.classList[1] ? playercard.classList.replace(playercard.classList[1], player1card.face)  : playercard.classList.add(player1card.face)
     compcard.classList[1] ? compcard.classList.replace(compcard.classList[1], player2card.face)  : compcard.classList.add(player2card.face)
-    
-
     compareCards(player1card, player2card)
     } 
-// }
+
 
 
 function compareCards(player1card, player2card) {
     if(player1card.value > player2card.value) {
-        player1Hand.push(player2card)
+        player1Hand.unshift(player1card, player2card)
         console.log("Player 1 Wins this draw!")
         let element = document.getElementById('wintext');
         element.innerHTML = 'Player 1 wins this draw!'
     } else {
-        player2Hand.push(player1card)
+        player2Hand.unshift(player1card, player2card)
         console.log("The Computer Wins this draw!")
         let element = document.getElementById('wintext');
         element.innerHTML = 'The Computer wins this draw!'   
+    } if (player1card.value === player2card.value) {
+        console.log('WarTie')
+        let tie = document.getElementById('tietext');
+        tie.innerHTML = 'WAR! Draw again'
+        
     }
   renderScore()
- 
-//Whoever wins, push both cards to the bottom of their deck (push to the array)
-//Computed State -
 }
 
 
@@ -113,42 +111,33 @@ function updateScore() {
     }
 
 }
- //showGameEnd() - clear the board
-let end = document.getElementById('gameover');
-end.innerHTML = 'Game over! ' + '//Winner?'
+ 
+function shouldGameEnd() {
+    if (player1Hand.length === 0) {
+    let end = document.getElementById('gameover');
+    end.innerHTML = 'Game over! ' + 'Player 1 wins'}
+    if (player2Hand.length === 0) {
+        let end = document.getElementById('gameover');
+        end.innerHTML = 'Game over! ' + 'Computer wins :('
+    }
+    
+}
 
 
-// function clearGame() {
-//     submissions.remove()
+// function clearSub() {
+//     card.clear()
+//     const card = card()
 // }
 
-// function updateScore() {
-//     if(player1card > player2card) {
-//         deck.push(player1Hand.score_p)
-//     } else {
-//         deck.push(player2Hand.score_c)
-//     }
-// }
 
 function init() {
-    //Clear submitted cards with clearGame()
-    // clearGame()
+    // clearSub()
     generateDeck()
     shuffleDeck(deck)
     dealHand()
     renderScore()
-    
+    updateScore()
+    // shouldGameEnd()
 }
 
-//Begin game//
 init()
-
-
-
-
-
-
-
-
-
-
