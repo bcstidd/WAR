@@ -29,15 +29,15 @@ const compcard = document.getElementById('compcard')
 const score_p = document.getElementById('score_p')
 const score_c = document.getElementById('score_c')
 const submissions = document.getElementById('submissions')
+const wintext = document.getElementById('wintext');
+const tietext = document.getElementById('tietext');
 
 // /*----- event listeners -----*/
-playBtn.addEventListener('click', tietext.remove())
 playBtn.addEventListener('click', flipCard)
 newBtn.addEventListener('click', init)
 
 
 /*----- functions -----*/
-
 function generateDeck() {
     suits.forEach(suit => {
         faces.forEach(face => {
@@ -61,18 +61,40 @@ function shuffleDeck(deck) {
     }
 
 function dealHand() {
-    player1Hand = deck.slice(1, 26)
+    player1Hand = deck.slice(0, 26)
     player2Hand = deck.slice(26, 52)
 }
 
+function tieBreak() {
+    tietext.innerHTML = '<strong><i><u>!--WAR--!</u></i></strong> &nbsp Draw again. Computer wins by default'
+    player2Hand.unshift(...player1Hand.splice(2, 8));
+    console.log('WarTie')
+    console.log(player1Hand, player2Hand)
+}
+
 function flipCard() {  
-      
+    clearTieText()
     const player1card = player1Hand.pop()
     const player2card = player2Hand.pop()
     playercard.classList[1] ? playercard.classList.replace(playercard.classList[1], player1card.face)  : playercard.classList.add(player1card.face)
     compcard.classList[1] ? compcard.classList.replace(compcard.classList[1], player2card.face)  : compcard.classList.add(player2card.face)
     compareCards(player1card, player2card)
-    } 
+} 
+
+function clearTieText() {
+tietext.innerText = ''
+}
+
+const gameOverAnim = document.querySelector('gameover');
+
+function fadeInOut() {
+ gameOverAnim.style.gameover.opacity = 0;
+  setTimeout(() => {
+    gameOverAnim.style.gameover.opacity = 1;
+  }, 1000);
+}
+
+// setInterval(fadeInOut, 2000);
 
 
 
@@ -82,62 +104,56 @@ function compareCards(player1card, player2card) {
         console.log("Player 1 Wins this draw!")
         let element = document.getElementById('wintext');
         element.innerHTML = 'Player 1 wins this draw!'
-    } else {
+    } else if (player2card.value > player1card.value){
         player2Hand.unshift(player1card, player2card)
-        console.log("The Computer Wins this draw!")
         let element = document.getElementById('wintext');
+        console.log("Computer Wins this draw!")
         element.innerHTML = 'The Computer wins this draw!'   
-    } if (player1card.value === player2card.value) {
-        console.log('WarTie')
-        let tie = document.getElementById('tietext');
-        tie.innerHTML = 'WAR! Draw again'
-        
+    } else {
+        tieBreak()
     }
   renderScore()
+  updateScore()
 }
-
 
 function renderScore() {
     score_p.innerText= `Player card count ${player1Hand.length}`
     score_c.innerText= `CPU card count ${player2Hand.length}`
 }
 
-
 function updateScore() {
     if(playercard.value > compcard.value) {
-        console.log(player2Hand.push(player1Hand))
-    } else {
-        console.log(player1Hand.push(player2Hand))
+        player2Hand.push(player1Hand);
+        return player2Hand;
+    } else if (playercard.value < compcard.value) {
+        player1Hand.push(...player2Hand);
+        return player1Hand;
     }
-
+    shouldGameEnd()
 }
- 
+
 function shouldGameEnd() {
     if (player1Hand.length === 0) {
     let end = document.getElementById('gameover');
-    end.innerHTML = 'Game over! ' + 'Player 1 wins'}
+    end.innerHTML = "Game over - " + "Computer wins :" + "'" + "("}
     if (player2Hand.length === 0) {
         let end = document.getElementById('gameover');
-        end.innerHTML = 'Game over! ' + 'Computer wins :('
+        console.log(end)
+        end.innerHTML = 'Game over! ' + 'Player 1 wins.'
     }
-    
 }
 
-
-// function clearSub() {
-//     card.clear()
-//     const card = card()
-// }
-
-
 function init() {
-    // clearSub()
+    compcard.className = 'card'
+    playercard.className = 'card'
+    tietext.innerText = ''
+    wintext.innerText = ''
+    gameover.innerText = ''
     generateDeck()
     shuffleDeck(deck)
     dealHand()
     renderScore()
     updateScore()
-    // shouldGameEnd()
 }
-
+//START!
 init()

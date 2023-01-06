@@ -14,6 +14,10 @@ div {
     background-color: none;
 }
 
+#gameover {
+    color: yellow;
+}
+
 #board {
     display: flex;
     flex-direction: column;
@@ -37,8 +41,24 @@ div {
     justify-content: center;
     align-self: center;
     border: transparent;
+    font-size: large;
+    animation-name: ;
 }
 
+#tietext {
+    justify-content: center;
+    color: red;
+    font-size: x-large;
+}
+
+#gameover {
+    color: lime;
+    animation-fill-mode: backwards;
+    animation-duration: infinite;
+    font-size: x-large;
+    align-self: center;
+    
+}
 
 #new {
     justify-self: flex-start;
@@ -73,10 +93,15 @@ div {
 
 
 #scores {
-    border: 3px dotted red;
     display: flex;
     justify-content: space-around;
     
+}
+
+.run {
+    color: red;
+    margin: 6px;
+    font-size: larger;
 }
 
 #rules {
