@@ -51,6 +51,12 @@ div {
     font-size: x-large;
 }
 
+.card {
+    font-size: large;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
 #gameover {
     color: lime;
     animation-fill-mode: backwards;
@@ -86,9 +92,10 @@ div {
     border-radius: 5px;
     font-size: larger;
     font-weight: 500;
-    margin-top: -30px;
+    margin-top: -20px;
     height: 40px;
     width: 150px;
+    position: inherit;
 } 
 
 

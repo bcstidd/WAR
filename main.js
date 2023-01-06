@@ -66,6 +66,7 @@ function dealHand() {
 }
 
 function tieBreak() {
+    wintext.innerHTML = ''
     tietext.innerHTML = '<strong><i><u>!--WAR--!</u></i></strong> &nbsp Draw again. Computer wins by default'
     player2Hand.unshift(...player1Hand.splice(2, 8));
     console.log('WarTie')
@@ -84,19 +85,6 @@ function flipCard() {
 function clearTieText() {
 tietext.innerText = ''
 }
-
-const gameOverAnim = document.querySelector('gameover');
-
-function fadeInOut() {
- gameOverAnim.style.gameover.opacity = 0;
-  setTimeout(() => {
-    gameOverAnim.style.gameover.opacity = 1;
-  }, 1000);
-}
-
-// setInterval(fadeInOut, 2000);
-
-
 
 function compareCards(player1card, player2card) {
     if(player1card.value > player2card.value) {
