@@ -101,7 +101,7 @@ div {
 #scores {
     display: flex;
     justify-content: space-around;
-    
+    background-color: #35654D;
 }
 
 .run {
@@ -133,11 +133,15 @@ div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    background-color: #35654D;
+
 }
 
 #hands {
     display: flex;
     justify-content: space-around;
+    background-color: #35654D;
+
 }
 /* player base hand */
 

@@ -68,7 +68,7 @@ function dealHand() {
 function tieBreak() {
     wintext.innerHTML = ''
     tietext.innerHTML = '<strong><i><u>!--WAR--!</u></i></strong> &nbsp Draw again. Computer wins by default'
-    player2Hand.unshift(...player1Hand.splice(2, 8));
+    player2Hand.unshift(...player1Hand.splice(0, 8));
     console.log('WarTie')
     console.log(player1Hand, player2Hand)
 }
